@@ -1,4 +1,4 @@
-package main.java;
+package main.java.stacks;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -30,9 +30,7 @@ public class StringPattern {
             } else if (ch == ']') {
                 StringBuilder decoded = new StringBuilder(stack.pop());
                 int repeatTimes = countStack.pop();
-                for (int i = 0; i < repeatTimes; i++) {
-                    decoded.append(currentStr);
-                }
+                decoded.append(String.valueOf(currentStr).repeat(Math.max(0, repeatTimes)));
                 currentStr = decoded;
             } else {
                 currentStr.append(ch);
