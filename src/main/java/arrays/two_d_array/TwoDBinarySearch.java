@@ -1,4 +1,4 @@
-package main.java.two_d_array;
+package main.java.arrays.two_d_array;
 
 
 public class TwoDBinarySearch {
@@ -16,12 +16,10 @@ public class TwoDBinarySearch {
         int end =arr.length;
         while(start<end){
             int mid=(start+end)/2;
-
             /**
              * If our target is greater than mid element then we set start to mid but not go mid +1 because
              * our element could be present in range of mid and (mid +1) because we are interested in just smaller index
              * so cannot skip mid to mid+1 interval
-             *
              * we are interested in just smaller element so if element is greater we move toward left
              */
             if(target>arr[mid])
