@@ -1,4 +1,4 @@
-package main.java.stocks;
+package main.java.arrays.stocks;
 
 public class BestDayToBuyAndSell {
 

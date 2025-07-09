@@ -1,4 +1,4 @@
-package main.java;
+package main.java.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -66,8 +66,6 @@ public class TwoSum {
                 return new int[] {left,right};
             }
         }
-
-
         return ans;
     }
 }
