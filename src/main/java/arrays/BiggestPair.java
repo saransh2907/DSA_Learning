@@ -1,7 +1,5 @@
 package main.java.arrays;
 
-import java.util.Arrays;
-
 public class BiggestPair {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7,8,8,9,9,0,0,5,3,2,2,2,46,6,7};
