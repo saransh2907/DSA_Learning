@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class FractionalKnapsack {
 
     public static void main(String[] args) {
-        int[] coins = {2,5};
-        int amount = 11;
+        int[] coins = {1,3,4};
+        int amount = 6;
         int coinsRequired = minimumCoinsRequired(coins,amount);
         System.out.println(coinsRequired);
     }
@@ -20,10 +20,15 @@ public class FractionalKnapsack {
         int j=coins.length-1;
         Arrays.sort(coins);
         while(amount>0 && j>=0){
+            int coin = coins[j];
+            if(amount<coin) {
+                j--;
+                continue;
+            }
             count += amount/coins[j];
             amount=amount%coins[j];
             j--;
         }
-        return count;
+        return amount==0?count:-1;
     }
 }
