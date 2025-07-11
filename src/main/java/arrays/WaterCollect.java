@@ -1,4 +1,4 @@
-package main.java.questions_to_do;
+package main.java.arrays;
 
 import java.util.Arrays;
 
