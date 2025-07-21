@@ -20,6 +20,9 @@ public class FrogJump {
 /*--------Tabulation */
         int energy1 = calculateMinEnergyTabulation(arr);
         System.out.println(energy1);
+/*--------Optimized----------------*/
+        int energy2 = calculateMinEnergyOptimized(arr);
+        System.out.println(energy2);
     }
 
     /**
@@ -70,5 +73,17 @@ public class FrogJump {
         }
         System.out.println(Arrays.toString(minE));
         return minE[arr.length -1];
+    }
+
+    private static int calculateMinEnergyOptimized(int[] arr) {
+        int e1 = 0;
+        int e2 = Math.abs(arr[1]-arr[0]);
+        for(int i = 2;i < arr.length; i++){
+            int energy1 = Math.abs(arr[i]-arr[i-1]) + e2;
+            int energy2 = Math.abs(arr[i]-arr[i-2]) + e1;
+            e1 = e2;
+            e2 = Math.min(energy1,energy2);
+        }
+        return e2;
     }
 }
