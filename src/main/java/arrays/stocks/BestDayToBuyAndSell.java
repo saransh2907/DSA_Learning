@@ -28,21 +28,21 @@ public class BestDayToBuyAndSell {
     }
 
     private static int getMaxProfitMultiple(int[] arr, int index, int buy){
-        System.out.println("index=" + index);
-        if(index == arr.length){
-            return 0;
-        }
-
-        if(buy == 1){
-            int ifBuy =   - arr[index] + getMaxProfitMultiple(arr,index+1, 0);;
-            int ifNotBuy = getMaxProfitMultiple(arr, index+1, 1);
-            return Math.max(ifNotBuy,ifBuy);
-        }else{
-            int ifBuy = arr[index] + getMaxProfitMultiple(arr, index + 1, 1);
-            int ifNotBuy = getMaxProfitMultiple(arr, index+1, 0);
-            return Math.max(ifNotBuy,ifBuy);
-        }
-
+        int profit = 0;
+        if(index==arr.length)
+           return 0;
+       else{
+           if(buy==0){
+                int sell = arr[index] + getMaxProfitMultiple(arr,index+1,1);
+                int notSell = getMaxProfitMultiple(arr, index+1, buy);
+                profit += Math.max(sell,notSell);
+           }else{
+               int buyS = -arr[index] + getMaxProfitMultiple(arr,index+1,0);
+               int notB= getMaxProfitMultiple(arr, index+1, buy);
+               profit+= Math.max(buyS,notB);
+           }
+       }
+       return profit;
     }
 
 }

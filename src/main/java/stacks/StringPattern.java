@@ -38,4 +38,21 @@ public class StringPattern {
         return currentStr.toString();
     }
 
+    /*
+     System.out.println("index=" + index);
+        if(index == arr.length){
+            return 0;
+        }
+        if(buy == 1){
+            int ifBuy =   - arr[index] + getMaxProfitMultiple(arr,index+1, 0);;
+            int ifNotBuy = getMaxProfitMultiple(arr, index+1, 1);
+            return Math.max(ifNotBuy,ifBuy);
+        }else{
+            int ifBuy = arr[index] + getMaxProfitMultiple(arr, index + 1, 1);
+            int ifNotBuy = getMaxProfitMultiple(arr, index+1, 0);
+            return Math.max(ifNotBuy,ifBuy);
+        }
+
+     */
+
 }
