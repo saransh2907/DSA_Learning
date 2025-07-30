@@ -3,8 +3,8 @@ package main.java.arrays;
 public class Kadane {
 
     public static void main(String[] args) {
-//        int[] arr = {2,3,5,-2,7, -4};
-        int[] arr = {5,-10,77, -4};
+        int[] arr = {2,3,5,-2,7, -4};
+//        int[] arr = {5,-10,77, -4};
 
         int maxSum = getMaxSumInSubarray(arr);
         System.out.println(maxSum);
@@ -26,7 +26,7 @@ public class Kadane {
                     sum+=arr[j];
 //                    maxSum= Math.max(sum,maxSum);
                     if(sum > maxSum) {
-                        System.out.println("updating i" + i +" j"+ j + " sum"+sum);
+//                        System.out.println("updating i" + i +" j"+ j + " sum"+sum);
                         first = i;
                         last = j;
                         maxSum = sum;

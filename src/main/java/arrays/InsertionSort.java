@@ -2,7 +2,7 @@ package main.java.arrays;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        int[] arr = {5, 2, 9, 1, 5, 6};
+        int[] arr = {1, 0, 2, 1, 0};
         insertionSort(arr);
         for (int num : arr) {
             System.out.print(num + " ");
@@ -19,7 +19,6 @@ public class InsertionSort {
         for (int i = 1; i < arr.length; i++) {
             int current = arr[i];
             int j = i - 1;
-
             // Move elements of arr[0..i-1], that are greater than current,
             // to one position ahead of their current position
             while (j >= 0 && arr[j] > current) {
