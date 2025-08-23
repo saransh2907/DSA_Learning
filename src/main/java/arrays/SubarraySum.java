@@ -1,5 +1,6 @@
 package main.java.arrays;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 public class SubarraySum {
@@ -43,6 +44,10 @@ public class SubarraySum {
 
     /**
      * Cumulative sum approach
+     *
+     * cs[x] = sum of element from index 0 to x
+     * cs[a] - cs[b] = sum of element from index b to a
+     * a[x] = cs[x] - cs[x-1]
      */
     private static int numSubarraysWithSumCS(int[] nums, int goal) {
         int[] cs = new int[nums.length];
